@@ -53,3 +53,8 @@ src: ./slides/programme.html
 title: Introduction
 src: ./slides/1.Introduction.html
 ---
+
+--- 
+title: Le Cadre Légal
+src: ./slides/2.Legal.html
+---
