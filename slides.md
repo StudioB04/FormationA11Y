@@ -63,3 +63,8 @@ src: ./slides/2.Legal.html
 title: Les Principes Fondamentaux de l'a11Y
 src: ./slides/3.Principes.html
 ---
+
+--- 
+title: Les Principes Fondamentaux de l'a11Y
+src: ./slides/4.Fondamentaux.html
+---
