@@ -7,12 +7,113 @@ transition: slide-up
 <SlideFooter/>
 
 ---
+layout: image-right
+transition: slide-up
+image: code.jpg
+---
+<h1>Les points clés</h1>
+
+<div mbs-10>
+    <p>Plus un site est compliqué et complet, plus il est difficile de le rendre 100% conforme aux critères du <b>RGAA</b>.</p>
+    <p>Chercher à obtenir le score parfait est quasiment impossible et peux devenir une source de frustration ou de découragement.</p>
+</div>
+
+<div mbs-5 v-click>
+    <Alert type="information" title="Les fondamentaux" text="Il y a cependant **8 points essentiels** sur lesquels vous ne devez pas faire l'impasse !" />
+</div>
+
+<div mbs-3 v-click>
+    <Alert type="idea" title="Idée" text="Ces 8 points sont relativement faciles à mettre en place et couvrent une grande partie des crières du **RGAA**. Ils sont donc prioritaires." />
+</div>
+
+<SlideFooter/>
+
+---
 layout: default
 transition: slide-up
 ---
 <h1>Les points clés</h1>
 
 <h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<p>Tous les contenus graphique et les texte de la page doivent être suffisament contrastés par rapport à la couleur de fond afin de permettre une lecture aisée pour les déficients visuels, ou dans des conditions de lumière intense par exemple.</p>
+
+<p v-click>Le contraste, c'est la différence de luminance de 2 couleurs, comprise entre</p>
+
+<ul v-after class="!-mbs-3 mis-10">
+    <li>1:1 (pas de constraste, c'est la même couleur)</li>
+    <li>21:1 (contraste maximum : noir sur blanc)</li>
+</ul>
+
+<div flex gap-20 mx-10 mbs-5 justify-around>
+    <div v-click flex flex-col gap-2 items-center>
+        <h2 class="!text-xl !text-light">Mauvais exemple :</h2>
+        <button class="px-4 py-2 bg-blue-200 text-white rounded-2">Ajouter au panier</button>
+        <p><b>contraste : 1,42:1</b></p>
+    </div>
+    <div v-click flex flex-col gap-2 items-center>
+        <h2 class="!text-xl !text-light">Bon exemple :</h2>
+        <button class="px-4 py-2 bg-blue-900 text-white rounded-2">Ajouter au panier</button>
+        <p><b>contraste : 10,36:1</b></p>
+    </div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Que dit le référentiel ?</h3>
+
+<p v-click>Le référienciel <b>RGAA</b> prévoit 2 niveaux de conformité :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem label="**AA** :<br>Le contraste entre le texte et l'arrière-plan doit être d'au moins **4,5:1** pour le texte normal<br>et de **3:1** pour le texte de plus de 18pt et les éléments d'interface." />
+    <ListItem label="**AAA** :<br>Le contraste entre le texte et l'arrière-plan doit être d'au moins **7:1** pour le texte normal<br>et de **4,5:1** pour le texte de plus de 18pt et les éléments d'interface." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Comment tester ?</h3>
+
+<p v-click>Il existe de nombreux plugin Chrome qui permettent de vérifier les constraste de couleur dans une page :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem image="WCAG-cc.png" label="**WCAG Contrast Checker**" link="https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf" />
+    <ListItem image="lighthouse.png" label="**Lighthouse**" link="https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" />
+    <ListItem image="wave.png" label="**Wave**" link="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" />
+    <ListItem image="stark.png" label="**Stark**" link="https://chromewebstore.google.com/detail/stark-accessibility-check/fkfaapnmfippddbeemjjbclenphooipm" />
+    <ListItem label="etc..." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">La révolution APCA</h3>
+
+<p class="!text-balance">Les ratios définis par le <b>WCAG</b> basés sur la luminance sont une bonne base mais les résultats sont parfois déroutants. L'algorithme APCA permet d'obtenir un résultat plus fiable et sera utilisé dans les version futures du <b>RGAA</b>.</p>
+
+<img v-click src="/APCA.png" alt="" class="w-1/2 m-auto" />
 
 <SlideFooter/>
 
@@ -24,6 +125,130 @@ transition: slide-up
 
 <h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
 
+<h3 class="!text-xl !text-lighter !mbs-5">Donner du conexte aux utilisateurs non-voyants</h3>
+
+<p>Certaines personnes ne peuvent pas voir vos pages, et doivent donc en déduire le sens par rapport à ce que le lecteur d'écran va restituer.</p>
+
+<p>Il est donc très important de proposer une alternative textuelle à tous les éléments graphiques de la page : les images, les videos, les infographies, etc.</p>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les images :</h3>
+
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/image-sens.webp" alt="" class="w-[200px] shrink-0" />
+<div  shrink-1>
+<p>Chaque image <u>porteuse de sens</u> doit avoit une alternative textuelle <u>pertinente</u>.</p>
+```html
+<img 
+    src="opeco-samsung.webp" 
+    alt="Jusqu'au 25 Mai 2025, bénéficiez de 21% de réduction..." 
+/>
+```
+</div>
+</div>
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/image-deco.webp" alt="" class="w-[300px] shrink-0" />
+<div  shrink-1>
+<p>Chaque image <u>de décoration</u> doit avoit une alternative textuelle <u>vide</u> pour être correctement ignorée par les lecteurs d'écran.</p>
+```html
+<img src="opeco-samsung.webp" alt="" />
+```
+</div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les images :</h3>
+
+<p>On peut souhaiter ajouter quand même une alternative à un image à des fins de référencement. En effet, les images sont indexées dans les moteurs de recherches par rapport à la description dans l'attribut <b>alt</b>.</p>
+
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/image-deco.webp" alt="" class="w-[300px] shrink-0" />
+<div  shrink-1>
+<p>Dans ce cas on va utiliser le role <b>presentation</b> pour préciser qu'il s'agit d'une <u>image de décoration</u> et qu'elle doit être ignorée :</p>
+```html
+<img 
+    src="opeco-samsung.webp" 
+    role="presentation" 
+    alt="Un conseiller Boulanger vends un iPhone..."
+/>
+```
+</div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les vidéos :</h3>
+
+<p>Comme pour les images, si une vidéo est <u>porteuse de sens</u>, alors il faudra :</p>
+
+<ul mis-10>
+    <ListItem label="Ajouter un titre pour que l'on sache de quoi parle video avant de la lancer" />
+    <ListItem label="Ajouter des sous-titres synchronisés pour les personnes malentendantes" />
+    <ListItem label="Ajouter éventuellement une audio desciption" />
+</ul>
+
+<p v-click>Si ce n'est pas faisable, on peux alors masquer la video au lecteurs d'écran et proposer un bloc de texte en contrepartie.</p>
+<p v-click>Si la video est juste la pour décorer la page, on va la cacher avec <kbd>aria-hidden="true"</kbd></p>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les infographies :</h3>
+
+<p>Pafois on a recours à des infograhies pour faire passer des informations de façon plus graphique.</p>
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/infographie.png" alt="" class="w-[300px]" />
+
+<div>
+<p>Il faudra faciliter la lecture des données grâçe à une alternative textuelle :</p>
+```html
+<figure>
+    <embed aria-hidden="true" src="population.jpg" />
+    <figcaption>
+       La population des métropôles du grand est...
+    </figcaption>
+</figure>
+```
+</div>
+
+</div>
 <SlideFooter/>
 
 ---
