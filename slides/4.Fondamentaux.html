@@ -23,7 +23,7 @@ image: code.jpg
 </div>
 
 <div mbs-3 v-click>
-    <Alert type="idea" title="Idée" text="Ces 8 points sont relativement faciles à mettre en place et couvrent une grande partie des crières du **RGAA**. Ils sont donc prioritaires." />
+    <Alert type="idea" title="Idée" text="Ces 8 points sont relativement faciles à mettre en place et couvrent une grande partie des critères du **RGAA**. Ils sont donc prioritaires." />
 </div>
 
 <SlideFooter/>
@@ -125,9 +125,9 @@ transition: slide-up
 
 <h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
 
-<h3 class="!text-xl !text-lighter !mbs-5">Donner du conexte aux utilisateurs non-voyants</h3>
+<h3 class="!text-xl !text-lighter !mbs-5">Donner du contexte aux utilisateurs non-voyants</h3>
 
-<p>Certaines personnes ne peuvent pas voir vos pages, et doivent donc en déduire le sens par rapport à ce que le lecteur d'écran va restituer.</p>
+<p>Certaines personnes ne peuvent pas voir vos pages, et doivent donc en déduire le sens par rapport à ce que le lecteur d'écran va vocaliser.</p>
 
 <p>Il est donc très important de proposer une alternative textuelle à tous les éléments graphiques de la page : les images, les videos, les infographies, etc.</p>
 
@@ -162,7 +162,7 @@ transition: slide-up
 <div  shrink-1>
 <p>Chaque image <u>de décoration</u> doit avoit une alternative textuelle <u>vide</u> pour être correctement ignorée par les lecteurs d'écran.</p>
 ```html
-<img src="opeco-samsung.webp" alt="" />
+<img src="vendeur-iphone.webp" alt="" />
 ```
 </div>
 </div>
@@ -188,7 +188,7 @@ transition: slide-up
 <p>Dans ce cas on va utiliser le role <b>presentation</b> pour préciser qu'il s'agit d'une <u>image de décoration</u> et qu'elle doit être ignorée :</p>
 ```html
 <img 
-    src="opeco-samsung.webp" 
+    src="vendeur-iphone.webp" 
     role="presentation" 
     alt="Un conseiller Boulanger vends un iPhone..."
 />
@@ -257,7 +257,81 @@ transition: slide-up
 ---
 <h1>Les points clés</h1>
 
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Comment tester ?</h3>
+
+<p v-click>Il existe de nombreux plugin Chrome qui permettent de vérifier les alternatives sur les images :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem image="web-developer.png" label="**Web Developer**" link="https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm" />
+    <ListItem image="lighthouse.png" label="**Lighthouse**" link="https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" />
+    <ListItem image="wave.png" label="**Wave**" link="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" />
+    <ListItem image="stark.png" label="**Stark**" link="https://chromewebstore.google.com/detail/stark-accessibility-check/fkfaapnmfippddbeemjjbclenphooipm" />
+    <ListItem label="etc..." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
 <h2 class="!text-3xl !text-light">3. Les titres</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Hierarchisez votre information</h3>
+
+
+
+<div class="flex justify-center gap-5">
+<div>
+<p v-click>La structure de titres joue un rôle important dans la compréhension de votre page web. Les lecteurs d'écran se servent des titres pour créer une table des matières de la page.</p>
+<p v-click>Il existe 6 niveaux de titre. Il est important de respecter un ordre cohérent.</p>
+
+<Alert v-click="4" type="idea" title="le <H1/>" text="On entends soiuvent dire que la page ne doit contenir une seule balise H1. En réalité, ce n'est pas vrai. en revanche l'ordre est très important. " />
+</div>
+
+<div v-click>
+```html
+<h1>Formation A11Y</h1>
+
+ <h2>Introduction</h2>
+  <h3>Préambule</h3>
+  <h3>Définitions</h3>
+  <h3>le cadre légal</h3>
+
+ <h2>Les fondamentaux</h2>
+  <h3>Les contrastes</h3> 
+  <h3>Les alternativrs textuelles</h3>
+  <h3>Les titres</h3>
+   <h4>La balise title</h4>
+   <h4>les balises Hn</h4>
+```
+</div>
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">3. Les titres</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Comment tester ?</h3>
+
+<p v-click>Il existe de nombreux plugin Chrome qui permettent de vérifier les structures de titre :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem image="headingsmap.png" label="**Heading map**" link="https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi" />
+    <ListItem image="stark.png" label="**Stark**" link="https://chromewebstore.google.com/detail/stark-accessibility-check/fkfaapnmfippddbeemjjbclenphooipm" />
+    <ListItem label="etc..." />
+</ul>
 
 <SlideFooter/>
 
@@ -269,6 +343,82 @@ transition: slide-up
 
 <h2 class="!text-3xl !text-light">4. Les noms accessibles</h2>
 
+<p>Tous les éléments focusables de la page doivent avoir un <u>nom accessible</u>, c'est à dire un texte qui sera vocalisé lors de la prose de focus.</p>
+
+<p v-click>Par défaut c'est le texte contenu dans l'élément qui sera vocalisé :</p>
+
+<div flex mbs-10 gap-10 items-start justify-around>
+
+<div v-after  flex flex-col gap-2 items-center w-full>
+<button class="px-4 py-2 bg-blue-700 text-white rounded-2 text-sm">Ajouter au panier</button>
+```html
+<button class="button">
+    Ajouter au panier
+</button>
+```
+<p text-center>Ici le nom accessible sera "Ajouter au panier"</p>
+</div>
+
+<div v-click flex flex-col gap-2 items-center w-full>
+<button class="px-4 py-2 bg-blue-700 text-white rounded-2 text-sm"><carbon-shopping-cart-plus /></button>
+```html
+<button class="button">
+    <carbon-shopping-cart-plus />
+</button>
+```
+<p text-center>Ici en revanche on a pas de texte mais une icone, il n'y a donc aucun nom accessible !</p>
+</div>
+
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">4. Les noms accessibles</h2>
+
+<p>Lorsque cette situation se produit, on peux expliquer aux lecteur d'écran le texte qui doit etre lu lorsque le bouton prends le focus. Il y a plusieurs méthodes :</p>
+
+<p v-click>Par défaut c'est le texte contenu dans l'élément qui sera vocalisé :</p>
+
+<ul mis-10 mbs-2>
+    <ListItem label="**L'attribut title** (Cela ajoutera aussi un tooltip visuelle)" />
+    <ListItem label="**L'attribut aria-label**" />
+    <ListItem label="**L'attribut aria-labelledby** (Prends l'ID d'un élément de la page)" />
+</ul>
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Important" text="Il y a un ordre de priorité : aria-labelledby, aria-label, contenu, title.<br/>On peut donc écraser le contenu du contenu avec un aria-label." />
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: image-right
+transition: slide-up
+image: debugger.png
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">4. Les noms accessibles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-10">Comment tester ?</h3>
+
+<p>Certains plugins comme <b>Lighthouse</b> peuvent identifier les éléments qui n'ont pas de nom accessible.</p>
+<p>Le plus simple est d'utiliser le débugger de <b>Chrome</b> qui possède un onglet accéssibilité.</p>
+<Arrow v-bind="{ color: '#f43f5e', x1:300, y1:400, x2:500, y2:430 }" />
+<Arrow v-bind="{ color: '#f43f5e', x1:890, y1:100, x2:890, y2:260 }" />
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Important" text='Il est important de choisir un nom accessible clair et pertinent :<br/>**"En savoir plus"** ou **"lire la suite"** manque un peu de contexte.' />
+</div>
+
 <SlideFooter/>
 
 ---
@@ -278,6 +428,8 @@ transition: slide-up
 <h1>Les points clés</h1>
 
 <h2 class="!text-3xl !text-light">5. La sémantique</h2>
+
+
 
 <SlideFooter/>
 
