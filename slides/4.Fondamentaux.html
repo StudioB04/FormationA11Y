@@ -290,7 +290,7 @@ transition: slide-up
 <p v-click>La structure de titres joue un rôle important dans la compréhension de votre page web. Les lecteurs d'écran se servent des titres pour créer une table des matières de la page.</p>
 <p v-click>Il existe 6 niveaux de titre. Il est important de respecter un ordre cohérent.</p>
 
-<Alert v-click="4" type="idea" title="le <H1/>" text="On entends soiuvent dire que la page ne doit contenir une seule balise H1. En réalité, ce n'est pas vrai. en revanche l'ordre est très important. " />
+<Alert v-click="4" type="idea" title="le <H1/>" text="On entends souvent dire que la page ne doit contenir une seule balise H1. En réalité, ce n'est pas vrai. en revanche l'ordre est très important. " />
 </div>
 
 <div v-click>
@@ -300,16 +300,43 @@ transition: slide-up
  <h2>Introduction</h2>
   <h3>Préambule</h3>
   <h3>Définitions</h3>
-  <h3>le cadre légal</h3>
+  <h3>Le cadre légal</h3>
 
  <h2>Les fondamentaux</h2>
   <h3>Les contrastes</h3> 
   <h3>Les alternativrs textuelles</h3>
   <h3>Les titres</h3>
    <h4>La balise title</h4>
-   <h4>les balises Hn</h4>
+   <h4>Les balises Hn</h4>
 ```
 </div>
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">3. Les titres</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Le titre de la page</h3>
+
+<p>Le titre de la page est lui aussi très important. C'est le premier élément qui sera lu par le lecteur d'écran. Il est important de choisir un titre pertinent.</p>
+
+<p v-click>C'est également ce titre qui sera affiché dans l'onglet de votre navigateur, ou dans les résultats de recherches sur <b>Google</b> par exemple.</p>
+
+<div v-click flex mbs-3>
+  <Alert type="idea" title="Bon à savoir" text="Si on a plein d'onglets ouverts ouverts en même temps, il peut être pratique d'indiquer à quoi ils correspondent. <br/>C'est une bonne pratique de mettre également le nom du site au début du titre."/>
+</div> 
+
+
+<div v-after mbs-5>
+  <h2 class="!text-sm !text-light !my-0">Exemple: </h2>
+  <p><kbd>Decathlon | CHAUSSURES DE RUNNING FEMME KALENJI</kbd></p>
 </div>
 
 
@@ -384,7 +411,7 @@ transition: slide-up
 
 <p>Lorsque cette situation se produit, on peux expliquer aux lecteur d'écran le texte qui doit etre lu lorsque le bouton prends le focus. Il y a plusieurs méthodes :</p>
 
-<p v-click>Par défaut c'est le texte contenu dans l'élément qui sera vocalisé :</p>
+<p v-click>Certains attributs peuvent combler le manque de nom accessible :</p>
 
 <ul mis-10 mbs-2>
     <ListItem label="**L'attribut title** (Cela ajoutera aussi un tooltip visuelle)" />
@@ -429,7 +456,15 @@ transition: slide-up
 
 <h2 class="!text-3xl !text-light">5. La sémantique</h2>
 
+<p v-after>"La sémantique en <b>HTML</b> consiste à utiliser des balises qui donnent du <strong><u>sens</u></strong> au contenu, permettant aux navigateurs, aux moteurs de recherche et aux technologies d'assistance (ex. lecteurs d'écran) de mieux interpréter une page web."</p>
 
+<p v-click>Une grande partie des contenus web peut être rendue accessible simplement en s’assurant d’utiliser les balises HTML appropriées.</p>
+
+<p v-click>Par exemple, une image présentée dans une balise <kbd>&lt;img/&gt;</kbd> sera bien interprétée par les lecteurs décran.<br/>En revanche une <kbd>&lt;div/&gt;</kbd> avec un <code>background-image</code> en <b>CSS</b> sera ignorée !</p>
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Attention" text='Eviter réattributation des rôles dans la mesure du possible. Exemple \<a role="button"\>.' />
+</div>
 
 <SlideFooter/>
 
@@ -441,6 +476,17 @@ transition: slide-up
 
 <h2 class="!text-3xl !text-light">6. Le focus</h2>
 
+<p>Certaines personnes n'utilise pas de souris pour naviguer, soit à cause d'un handicap (cécité, handicap moteur), soit par choix, ou tout simplement parce que leur souris est en panne ou n'a plus de pile.</p>
+
+<p v-click>Lors de la navigation au clavier il est imporant pour l'utilisateur de comprendre ou il se trouve sur la page. Par défaut, les focus sont encadrés mais souvent, ils sont désactivas pour des raisons de design.</p>
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="idea" title="Astuce" text='Pour éviter le focus au click, il faut utiliser la rêgle CSS **:focus-visible** au lieu de **:focus**.' />
+</div>
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Attention" text="Il est important de respecter l'ordre logique de tabulation, il doit être logique est respecter l'ordre d'affichage de la page." />
+</div>
+
 <SlideFooter/>
 
 ---
@@ -449,7 +495,22 @@ transition: slide-up
 ---
 <h1>Les points clés</h1>
 
-<h2 class="!text-3xl !text-light">7. Les infos évidentes</h2>
+<h2 class="!text-3xl !text-light">7. Les liens d'évitement</h2>
+
+<p>Lorsqu'on navigue sur un site internet, il est fréquent que la page soit raffraichie, à chaque fois qu'on clique sur un lien par exmeple. Les utilisateurs qui naviguent au clavier doivent alors reparcourir tout le header et le menu avant d'arriver sur le contenu principal.</p>
+
+<p v-click>Une bonne pratique est de créer des liens vers les sections principales de la page, comme : </p>
+
+<ul mis-10>
+    <ListItem label="**L'entête de page** (header)" />
+    <ListItem label="**Le menu principal** (nav)" />
+    <ListItem label="**Le contenu principal** (main)" />
+    <ListItem label="**Le pied de page** (footer)" />
+</ul>
+
+<div v-click flex justify-center mbs-5>
+    <Alert type="warning" title="Attention" text="Il est possible de cacher ces liens mais il doivent apparaitre au focus et êtres les premiers élément atteignables au clavier." />
+</div>
 
 <SlideFooter/>
 
@@ -459,6 +520,75 @@ transition: slide-up
 ---
 <h1>Les points clés</h1>
 
-<h2 class="!text-3xl !text-light">8. Les liens d'évitement</h2>
+<h2 class="!text-3xl !text-light">8. L'évidence de l'information</h2>
+
+<p>Certaines personnes peuvent avoir des difficultés de compréhension ou pour distinguer les couleurs. Il est donc important de ne pas donner l’information uniquement par la forme, taille ou position.</p>
+
+<p>Quelques exemples :</p>
+
+<ul mis-10>
+    <ListItem label="**Les messages d'erreurs** : <br/>Dans un formumaire il faut indiquer le champ concerné par l'erreur." />
+    <ListItem label="**Les liens** : <br/>Dans un paragraphe de texte, les liens doivent se distinguer (pas uniquement par la couleur)" />
+    <ListItem label='**Les indications floues** : <br/>évitez les indications du style du style "Cliquez sur le bouton bleu" ou "le texte a droite".' />
+    <ListItem label="**Les messages d'alerte** : <br/>Il faut indiquer dans le texte si le message est une alerte, une information ou un succès." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">8. L'évidence de l'information</h2>
+
+<p>Une information ne doit pas être donnée uniquement par la couleur.</p>
+
+<div flex gap-10 justify-center items-center mbs-15 class="">
+<div class="w-1/2">
+<p>Dans cet exemple, rien de différencie les portions du diagramme à part la couleur. Certaines personnes ne distinguent pas les couleurs, il leur est impossible de comprendre.</p>
+<Alert v-click="1" type="idea" title="Idée" text="Ajouter des flêches ou des hachures à chaque zone pour les ditinguer." />
+</div>
+
+<div class="relative w-1/2">
+<img src="/colors.png" alt="" class="w-[400px] opacity-0" />
+<img v-click.hide="1"  src="/colors.png" alt="" class="absolute inset-0 w-[400px]" />
+<img v-click="1"  src="/colors.png" alt="" class="absolute inset-0 w-[400px] grayscale" />
+</div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">8. L'évidence de l'information</h2>
+
+
+<div flex gap-10 justify-center items-center mbs-0>
+    <p>Si vous avez un doute, vous pouvez utiliser l'extension <b>Stark</b> pour simuler des troubles de la perception des couleurs</p>
+    <img src="/stark-simulation.png" alt="" class="h-[400px]" />
+</div>
+
+<SlideFooter/>
+
+---
+layout: image-left
+image: code.jpg
+transition: slide-left
+---
+<h1>En conclusion</h1>
+
+<p>Les rêgles d'accessibilités sont avant tout des rêgles de bon sens.</p>
+<p>En respectant ces quelques rêgles, vous vous assurez que votre application soit utuilisable par le plus grand nombre.</p>
+
+<div @click="$slidev.nav.next" class="mbs-25 text-end text-primary cursor-pointer">
+  Suite de la formation <carbon-arrow-right />
+</div>
+
 
 <SlideFooter/>
