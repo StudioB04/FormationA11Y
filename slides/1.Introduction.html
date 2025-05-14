@@ -18,7 +18,7 @@ transition: slide-up
 <div v-click flex flex-col gap-2 mbs-2 justify-center align-center mx-20>
   <img src="/A11Y.png" alt="" class="w-[500px] mx-auto" />
   
-  <div text-pretty>Il s'agit des premières et dernières lettres du mot <b>accessibility</b>, et du chiffre 11 qui correspond au nombre de lettres entre les deux. Sur certains sites français, vous pourrez voir l'accronyme <b>a11é</b>.</div>
+  <div text-pretty>Il s'agit des premières et dernières lettres du mot <b>accessibility</b>, et du chiffre <b>11</b> qui correspond au nombre de lettres entre les deux. <br>Sur certains sites français, vous pourrez voir l'accronyme <b>a11é</b>.</div>
   <div text-pretty>On retrouve souvent ce genre d'acronyme en informatique, comme <b>i18n</b>, <b>k8s</b>, <b>l10n</b>, <b>c11y</b>, etc...</div>
 </div>
 
@@ -42,10 +42,10 @@ transition: slide-up
 
 <h2 class="!text-2xl text-light mbe-10">Vous pensez à quoi si on vous dit "accessibilité" ?</h2>
 
-<p v-click>L’accessibilité, c’est le fait de rendre un lieu, un service, une information, ou une activité utilisables par <br> <u>toutes les personnes</u> : les personnes valides comme les personnes en situation de handicap.</p>
-<p v-click>Dans le numérique, c’est veiller à ce que tout le monde puisse naviguer, comprendre et interagir avec un site web ou une application, quel que soit son contexte ou ses capacités.</p>
+<p v-click class="!text-balance">L’accessibilité, c’est le fait de rendre un lieu, un service, une information, ou une activité utilisable par <u>TOUT LE MONDE</u> : les personnes valides comme les personnes en situation de handicap.</p>
+<p v-after class="!text-balance">Dans le numérique, c’est veiller à ce que tout le monde puisse naviguer, comprendre et interagir avec un site web ou une application, quel que soit son contexte ou ses capacités.</p>
 
-<div v-after flex mbs-10>
+<div v-click flex mbs-10 mx-25>
   <Alert type="idea" title="Idée reçue" text="Lorsqu’on évoque l’accessibilité, on pense souvent en premier lieu aux personnes en situation de handicap. Et c’est effectivement un public central. Mais en réalité, l’accessibilité bénéficie à tout le monde, qu’on soit valide ou non." />
 </div>
 
@@ -64,10 +64,10 @@ transition: slide-up
   <cite block pt-5 text-right text-sm>Source : Article L114 – Code de l'action sociale et des familles</cite>
 </blockquote>
 
-<p v-click class="!mbs-5 !text-balance">Un handicap peut être <b>permanent</b>, <b>temporaire</b> ou même <b>situationnel</b>. <br>Par exemple, une personne avec un bras cassé connaît un handicap temporaire : pendant quelque temps, certaines actions lui seront plus difficiles, voire impossibles, comme taper au clavier, scroller ou utiliser une souris.</p>
+<p v-click class="!mbs-5 !text-balance">Un handicap peut être <b><u>permanent</u></b>, <b><u>temporaire</u></b> ou <b><u>situationnel</u></b>. <br>Par exemple, une personne avec un bras cassé connaît un handicap temporaire : pendant quelque temps, certaines actions lui seront plus difficiles, voire impossibles, comme taper au clavier, scroller ou utiliser une souris.</p>
 
-<div v-click flex mbs-10 justify-center scale-150>
-  <Alert type="idea" title="Conclusion " text="Nous sommes TOUS concernés !" />
+<div v-click flex mbs-10 justify-center scale-130>
+  <Alert type="idea" title="Conclusion " text="Nous sommes <u>TOUS</u> concernés !" />
 </div>
 
 <SlideFooter/>
@@ -80,9 +80,9 @@ transition: slide-up
 
 <h2 class="!text-2xl text-light mbe-10">Question :</h2>
 
-<p class="font-bold text-center">Selon vous, combien de personnes en situation de handicap compte-t-on en France ?</p>
+<p class="!text-xl font-bold text-center">Selon vous, combien de personnes en situation de handicap compte-t-on en France ?</p>
 
-<div v-click mbs-20>
+<div v-click mbs-10>
   <p class="!text-6xl text-primary font-bold text-center">Entre 7 et 12 millions !</p>
 </div>
 
@@ -113,7 +113,7 @@ transition: slide-up
   </div>
   <div v-click flex flex-col items-center gap-2 w-full>
     <h3>MENTAL</h3>
-    <span text-sm>On parle de handicap mental lorsque la personne éprouve des difficultés de : </span>
+    <span text-sm>On parle de handicap mental lorsque une personne éprouve des difficultés de : </span>
     <ul text-sm>
       <li>de contextualisation</li>
       <li>de réflexion</li>
@@ -243,7 +243,7 @@ transition: slide-up
   <Alert type="idea" title="Bon à savoir" text="N'oubliez pas que les bots des moteurs de recherche sont **aveugles** et n'ont **pas de souris** pour naviguer. Ils ne voient que le code, et non pas les pages elles même !" />
 </div>
 
-<div v-click mbs-10>✅ Résultat : un site plus accessible est souvent…</div>
+<div v-click mbs-10>✅ Résultat : un site plus accessible est souvent :</div>
 <ul v-after mis-10>
   <li>mieux compris,</li>
   <li>mieux indexé,</li>

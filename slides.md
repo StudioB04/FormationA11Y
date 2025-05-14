@@ -68,3 +68,13 @@ src: ./slides/3.Principes.html
 title: Les Principes Fondamentaux de l'a11Y
 src: ./slides/4.Fondamentaux.html
 ---
+
+--- 
+title: Test à l'aveugle
+src: ./slides/5.test.html
+---
+
+--- 
+title: Le RGAA
+src: ./slides/6.Audit.html
+---
